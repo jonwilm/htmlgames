@@ -7,6 +7,7 @@ body {
   height: 100%;
   text-align: center;
   font-size: 18px;
+  margin: 0;
 }
 .wrappper {
   width: 100%;
@@ -16,6 +17,9 @@ body {
   content: "";
   display: table;
   clear: both;
+}
+.wrapper{
+  padding: 0 3vw;
 }
 canvas {
   color: #fff;
@@ -27,15 +31,6 @@ h1, h2, h3 {
   font-weight: 100;
   text-transform: uppercase;
   margin: 5px 0;
-}
-h1 {
-  font-size: 2.6em;
-}
-h2 {
-  font-size: 1.6em;
-}
-p {
-  font-size: 1.6em;
 }
 #alphabet {
   margin: 15px auto;
@@ -49,11 +44,10 @@ p {
 }
 #alphabet li {
   float: left;
-  margin: 0 10px 10px 0;
+  margin: 1.4vw;
   list-style: none;
-  width: 35px;
-  height: 30px;
-  padding-top: 10px;
+  width: 10vw;
+  height: 10vw;
   background: #fff;
   color: #c1d72e;
   cursor: pointer;
@@ -62,6 +56,11 @@ p {
   border-radius: 5px;
   -khtml-border-radius: 5px;
   border: solid 1px #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50px;
+  max-height: 50px;
 }
 #alphabet li:hover {
   background: #c1d72e;
@@ -130,12 +129,8 @@ button:hover {
   color: #c1d72e;
 }
 @media (max-width: 767px) {
-  #alphabet {
-    padding: 0 0 0 15px;
-  }
+
 }
 @media (max-width: 480px) {
-  #alphabet {
-    padding: 0 0 0 25px;
-  }
+
 }
