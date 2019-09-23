@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ahorcado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Ahorcado</h1>
+    <p>Use el alfabeto a continuación para adivinar la palabra, o haga clic en pista para obtener una pista.</p>
+  </div>
+  <div class="wrapper">
+    <div id="buttons">
+    </div>  
+    <p id="catagoryName"></p>
+    <div id="hold">
+    </div>
+    <p id="mylives"></p>
+    <p id="clue">Pista -</p>  
+    <canvas id="stickman">Este texto se mostrará si el navegador NO admite la etiqueta HTML5 Canvas</canvas>
+    <div class="container">
+      <button id="hint">Pista</button>
+      <button id="reset">Juega de nuevo</button>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
