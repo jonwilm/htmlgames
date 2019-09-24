@@ -484,9 +484,10 @@ div.logomina
 
 div.textoinferior
 {
-    width: 207px;    
-    height: 20px; 
-    margin: 0 auto;
+    width: 207px;
+    height: 20px;
+    margin: 20px auto;
+    text-align: center;
 }
 
 div.textoinferior .texto
@@ -501,7 +502,7 @@ div.textoinferior .texto
 
 div.textoinferior .imagenbandera
 {
-    background: url("Images/bloque_banderamini.png");
+    background: url("Images/bloque_banderamini.png") no-repeat center;
     width: 15px;
     height: 15px;
     float: left;

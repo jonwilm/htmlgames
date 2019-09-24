@@ -5,6 +5,21 @@ function principal() {
 
     $('#lblcontador').text('0');
 
+    $('.b-act').css('display', 'none')
+    $('.b-desact').css('display', 'inline-block')
+    $('.colocar-bandera').click(function(){
+        $('.colocar-bandera').toggleClass('act')
+        if ($('.colocar-bandera').hasClass('act')) {
+            $('.b-act').css('display', 'inline-block')
+            $('.b-desact').css('display', 'none')
+            controlPress = true;
+        } else {
+            $('.b-act').css('display', 'none')
+            $('.b-desact').css('display', 'inline-block')
+            controlPress = false;
+        }
+    })
+
     document.onkeyup = function (e) {
         if (e.which == 90 || e.which == 122) {
             controlPress = false;
