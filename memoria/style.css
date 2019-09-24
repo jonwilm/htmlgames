@@ -5,15 +5,16 @@ html, body {
   height: 100%;
 }
 body {
-  background: black;
-  min-height: 100%;
+  /*min-height: 90%;*/
   font-family: "Arial", sans-serif;
+  font-size: 16px;
 }
 .wrap {
+  /*background: black;*/
   position: relative;
-  height: 100%;
-  min-height: 500px;
-  padding-bottom: 20px;
+  height: 70%;
+  /*min-height: 500px;*/
+  /*padding-bottom: 20px;*/
 }
 .game {
   transform-style: preserve-3d;
@@ -41,6 +42,7 @@ body {
   cursor: pointer;
   z-index: 50;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: black;
 }
 @media (max-width: 800px) {
   .card {
@@ -220,4 +222,7 @@ footer .disclaimer {
   footer .disclaimer {
     font-size: 8px;
   }
+}
+h1{
+  text-align: center;
 }
