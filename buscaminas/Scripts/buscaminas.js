@@ -25,52 +25,76 @@ function principal() {
         //antes de validar el click derecho hay q validar q no se este utilizando mozilla
         if(!$.browser.mozilla){
             if (event.button == 2) { //click derecho
-            var id = $(this).attr('id').split('p');
-            var i = id[0];
-            var j = id[1];
+                var id = $(this).attr('id').split('p');
+                var i = id[0];
+                var j = id[1];
 
-            if (perder) {
-                perdiste();
-            }
-            else if (ganar) {
-                ganaste();
-            }
-            if (minas[i][j] == 0) {
-                minas[i][j] = 10;
-                asignarBandera(this);
-            }
-            else if (minas[i][j] == -1) {
-                minas[i][j] = -100;
-                asignarBandera(this);
-            }
-            else if (minas[i][j] == 1 || minas[i][j] == 2 || minas[i][j] == 3 || minas[i][j] == 4 || minas[i][j] == 5 || minas[i][j] == 6 || minas[i][j] == 7 || minas[i][j] == 8) {
-                minas[i][j] = minas[i][j] * 1000;
-                asignarBandera(this);
-            }
-            else if (minas[i][j] == 10) {
-                minas[i][j] = 0;
-                quitarBandera(this);
-            }
-            else if (minas[i][j] == -100) {
-                minas[i][j] = -1;
-                quitarBandera(this);
-            }
-            else if (minas[i][j] == 1000 || minas[i][j] == 2000 || minas[i][j] == 3000 || minas[i][j] == 4000 || minas[i][j] == 5000 || minas[i][j] == 6000 || minas[i][j] == 7000 || minas[i][j] == 8000) {
-                minas[i][j] = minas[i][j] / 1000;
-                quitarBandera(this);
-            }
-
-            if (minasTapadas()) {
-                if (!existenEspaciosCubiertos()) {
-                    clearInterval(timer);
+                if (perder) {
+                    perdiste();
+                }
+                else if (ganar) {
                     ganaste();
                 }
-            }
+                if (minas[i][j] == 0) {
+                    minas[i][j] = 10;
+                    asignarBandera(this);
+                }
+                else if (minas[i][j] == -1) {
+                    minas[i][j] = -100;
+                    asignarBandera(this);
+                }
+                else if (minas[i][j] == 1 || minas[i][j] == 2 || minas[i][j] == 3 || minas[i][j] == 4 || minas[i][j] == 5 || minas[i][j] == 6 || minas[i][j] == 7 || minas[i][j] == 8) {
+                    minas[i][j] = minas[i][j] * 1000;
+                    asignarBandera(this);
+                }
+                else if (minas[i][j] == 10) {
+                    minas[i][j] = 0;
+                    quitarBandera(this);
+                }
+                else if (minas[i][j] == -100) {
+                    minas[i][j] = -1;
+                    quitarBandera(this);
+                }
+                else if (minas[i][j] == 1000 || minas[i][j] == 2000 || minas[i][j] == 3000 || minas[i][j] == 4000 || minas[i][j] == 5000 || minas[i][j] == 6000 || minas[i][j] == 7000 || minas[i][j] == 8000) {
+                    minas[i][j] = minas[i][j] / 1000;
+                    quitarBandera(this);
+                }
+
+                if (minasTapadas()) {
+                    if (!existenEspaciosCubiertos()) {
+                        clearInterval(timer);
+                        ganaste();
+                    }
+                }
 
             }
         }
         
 
+    });
+
+
+    $('.bloque').dblclick(function() {
+
+        if (minas[i][j] == 0) {
+            minas[i][j] = 10;
+            asignarBandera(this);
+        } else if (minas[i][j] == -1) {
+            minas[i][j] = -100;
+            asignarBandera(this);
+        } else if (minas[i][j] == 1 || minas[i][j] == 2 || minas[i][j] == 3 || minas[i][j] == 4 || minas[i][j] == 5 || minas[i][j] == 6 || minas[i][j] == 7 || minas[i][j] == 8) {
+            minas[i][j] = minas[i][j] * 1000;
+            asignarBandera(this);
+        } else if (minas[i][j] == 10) {
+            minas[i][j] = 0;
+            quitarBandera(this);
+        } else if (minas[i][j] == -100) {
+            minas[i][j] = -1;
+            quitarBandera(this);
+        } else if (minas[i][j] == 1000 || minas[i][j] == 2000 || minas[i][j] == 3000 || minas[i][j] == 4000 || minas[i][j] == 5000 || minas[i][j] == 6000 || minas[i][j] == 7000 || minas[i][j] == 8000) {
+            minas[i][j] = minas[i][j] / 1000;
+            quitarBandera(this);
+        }
     });
     
     $('.bloque').click(function () {
